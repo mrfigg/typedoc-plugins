@@ -1,0 +1,65 @@
+{
+  "name": "typedoc-plugins",
+  "author": "MrFigg",
+  "license": "MIT",
+  "private": true,
+  "homepage": "https://mrfigg.github.io/typedoc-plugins",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrfigg/typedoc-plugins.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mrfigg/typedoc-plugins/issues"
+  },
+  "type": "module",
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "bin": {
+    "typedoc-plugins-docs": "./dist/index.mjs"
+  },
+  "files": [
+    "./dist"
+  ],
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "devEngines": {
+    "packageManager": {
+      "name": "npm",
+      "version": "^11.13.0"
+    }
+  },
+  "workspaces": [
+    ".",
+    "plugins/*"
+  ],
+  "scripts": {
+    "prepare": "tsdown",
+    "build": "turbo run build:tsdown build:docs",
+    "build:tsdown": "tsdown",
+    "build:docs": "typedoc-plugins-docs",
+    "lint": "turbo run lint:eslint",
+    "lint:eslint": "eslint ."
+  },
+  "dependencies": {
+    "jsdom": "^30.0.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@typescript/native": "npm:typescript@^7.0.2",
+    "eslint": "^10.9.0",
+    "prettier": "^3.9.6",
+    "tsdown": "^0.22.14",
+    "turbo": "^2.10.12",
+    "typedoc": "^0.28.0",
+    "typedoc-plugin-document-page-headings": "^2.0.0",
+    "typedoc-plugin-emojify": "^2.0.1",
+    "typedoc-plugin-iconify": "^1.0.0",
+    "typedoc-plugin-iconify-navigation-links": "^1.0.0",
+    "typedoc-plugin-rename-documents": "^2.0.0",
+    "typedoc-plugin-replace-text": "^4.2.0",
+    "typedoc-plugin-version-header": "^2.0.0",
+    "typescript": "npm:@typescript/typescript6@^6.0.2",
+    "typescript-eslint": "^8.67.0"
+  }
+}

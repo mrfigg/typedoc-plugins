@@ -1,0 +1,43 @@
+{
+  "$schema": "https://typedoc.org/schema.json",
+  "name": "Emojify",
+  "entryPoints": ["./src/index.ts"],
+  "githubPages": false,
+  "disableSources": true,
+  "includeHierarchySummary": false,
+  "headings": {
+    "readme": false
+  },
+  "navigationLinks": {
+    "GitHub": "https://github.com/mrfigg/typedoc-plugins/tree/main/plugins/emojify"
+  },
+  "plugin": [
+    "typedoc-plugin-document-page-headings",
+    "typedoc-plugin-emojify",
+    "typedoc-plugin-iconify-navigation-links",
+    "typedoc-plugin-replace-text",
+    "typedoc-plugin-version-header"
+  ],
+  "iconifyNavigationLinks": {
+    "GitHub": "ant-design:github-filled"
+  },
+  "replaceText": {
+    "replacements": [
+      {
+        "pattern": "(?<=^#+\\ )typedoc-plugin-emojify",
+        "flags": "gmis",
+        "replace": "Emojify"
+      },
+      {
+        "pattern": "#+ Example(?:(?!^#).)*",
+        "flags": "gmis",
+        "replace": ""
+      },
+      {
+        "pattern": "available at \\[https?:\\/\\/(www\\.)?github\\.com\\/mrfigg\\/typedoc-plugins\\/?[^\\]]*\\]\\(https?:\\/\\/(www\\.)?github\\.com\\/mrfigg\\/typedoc-plugins\\/?[^)]*\\)",
+        "flags": "gmis",
+        "replace": "[here](../)"
+      }
+    ]
+  }
+}

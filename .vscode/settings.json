@@ -1,0 +1,5 @@
+{
+  "commentAnchors.workspace.lazyLoad": false,
+  "commentAnchors.workspace.excludeFiles": "**/{node_modules,.git,.idea,target,out,build,bin,obj,dist,docs,vendor}/**/*",
+  "js/ts.tsdk.promptToUseWorkspaceVersion": true
+}

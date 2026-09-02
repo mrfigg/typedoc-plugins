@@ -1,0 +1,68 @@
+{
+  "name": "typedoc-plugin-iconify-navigation-links",
+  "version": "1.0.0",
+  "description": "A plugin for TypeDoc that replaces navigation links with iconify icons",
+  "author": "MrFigg",
+  "license": "MIT",
+  "homepage": "https://mrfigg.github.io/typedoc-plugins/iconify-navigation-links",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrfigg/typedoc-plugins.git",
+    "directory": "plugins/iconify-navigation-links"
+  },
+  "bugs": {
+    "url": "https://github.com/mrfigg/typedoc-plugins/issues"
+  },
+  "keywords": [
+    "typedoc",
+    "plugin",
+    "typedoc-plugin",
+    "typedocplugin",
+    "icon",
+    "iconify"
+  ],
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.cts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "files": [
+    "./dist"
+  ],
+  "engines": {
+    "node": ">=21.0.0"
+  },
+  "scripts": {
+    "build:tsdown": "tsdown",
+    "lint:eslint": "eslint ."
+  },
+  "peerDependencies": {
+    "typedoc": "^0.28.0"
+  },
+  "dependencies": {
+    "@iconify/json": "^2.2.524",
+    "@iconify/utils": "^3.1.4",
+    "jsdom": "^30.0.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/jsdom": "^30.0.0",
+    "@types/node": "^26.4.0",
+    "@typescript/native": "npm:typescript@^7.0.2",
+    "eslint": "^10.9.0",
+    "tsdown": "^0.22.14",
+    "typescript": "npm:@typescript/typescript6@^6.0.2",
+    "typescript-eslint": "^8.67.0"
+  }
+}

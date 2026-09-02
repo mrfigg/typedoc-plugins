@@ -1,0 +1,17 @@
+{
+  "$schema": "https://turborepo.dev/schema.json",
+  "tasks": {
+    "build:tsdown": {
+      "dependsOn": ["^build:tsdown"],
+      "outputs": ["./dist/**"]
+    },
+    "build:docs": {
+      "dependsOn": ["build:tsdown"],
+      "outputs": ["./docs/**"]
+    },
+    "lint:eslint": {
+      "dependsOn": ["^lint:eslint"],
+      "cache": false
+    }
+  }
+}

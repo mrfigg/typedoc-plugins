@@ -1,0 +1,42 @@
+{
+  "$schema": "https://typedoc.org/schema.json",
+  "name": "Document Page Headings",
+  "entryPoints": ["./src/index.ts"],
+  "githubPages": false,
+  "disableSources": true,
+  "includeHierarchySummary": false,
+  "headings": {
+    "readme": false
+  },
+  "navigationLinks": {
+    "GitHub": "https://github.com/mrfigg/typedoc-plugins/tree/main/plugins/document-page-headings"
+  },
+  "plugin": [
+    "typedoc-plugin-document-page-headings",
+    "typedoc-plugin-iconify-navigation-links",
+    "typedoc-plugin-replace-text",
+    "typedoc-plugin-version-header"
+  ],
+  "iconifyNavigationLinks": {
+    "GitHub": "ant-design:github-filled"
+  },
+  "replaceText": {
+    "replacements": [
+      {
+        "pattern": "(?<=^#+\\ )typedoc-plugin-document-page-headings",
+        "flags": "gmis",
+        "replace": "Document Page Headings"
+      },
+      {
+        "pattern": "#+ Example(?:(?!^#).)*",
+        "flags": "gmis",
+        "replace": ""
+      },
+      {
+        "pattern": "available at \\[https?:\\/\\/(www\\.)?github\\.com\\/mrfigg\\/typedoc-plugins\\/?[^\\]]*\\]\\(https?:\\/\\/(www\\.)?github\\.com\\/mrfigg\\/typedoc-plugins\\/?[^)]*\\)",
+        "flags": "gmis",
+        "replace": "[here](../)"
+      }
+    ]
+  }
+}

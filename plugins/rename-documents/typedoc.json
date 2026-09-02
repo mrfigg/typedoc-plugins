@@ -1,0 +1,46 @@
+{
+  "$schema": "https://typedoc.org/schema.json",
+  "name": "Rename Documents",
+  "entryPoints": ["./src/index.ts"],
+  "githubPages": false,
+  "disableSources": true,
+  "includeHierarchySummary": false,
+  "headings": {
+    "readme": false
+  },
+  "navigationLinks": {
+    "GitHub": "https://github.com/mrfigg/typedoc-plugins/tree/main/plugins/rename-documents"
+  },
+  "plugin": [
+    "typedoc-plugin-document-page-headings",
+    "typedoc-plugin-iconify-navigation-links",
+    "typedoc-plugin-rename-documents",
+    "typedoc-plugin-replace-text",
+    "typedoc-plugin-version-header"
+  ],
+  "iconifyNavigationLinks": {
+    "GitHub": "ant-design:github-filled"
+  },
+  "renameDocuments": {
+    "./EXAMPLE.md": "EXAMPLE (Renamed)"
+  },
+  "replaceText": {
+    "replacements": [
+      {
+        "pattern": "(?<=^#+\\ )typedoc-plugin-rename-documents",
+        "flags": "gmis",
+        "replace": "Rename Documents"
+      },
+      {
+        "pattern": "#+ Example(?:(?!^#).)*",
+        "flags": "gmis",
+        "replace": ""
+      },
+      {
+        "pattern": "available at \\[https?:\\/\\/(www\\.)?github\\.com\\/mrfigg\\/typedoc-plugins\\/?[^\\]]*\\]\\(https?:\\/\\/(www\\.)?github\\.com\\/mrfigg\\/typedoc-plugins\\/?[^)]*\\)",
+        "flags": "gmis",
+        "replace": "[here](../)"
+      }
+    ]
+  }
+}

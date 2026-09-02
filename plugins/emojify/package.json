@@ -1,0 +1,67 @@
+{
+  "name": "typedoc-plugin-emojify",
+  "version": "2.0.1",
+  "description": "A plugin for TypeDoc that adds emoji parsing support",
+  "author": "MrFigg",
+  "license": "MIT",
+  "homepage": "https://mrfigg.github.io/typedoc-plugins/emojify",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrfigg/typedoc-plugins.git",
+    "directory": "plugins/emojify"
+  },
+  "bugs": {
+    "url": "https://github.com/mrfigg/typedoc-plugins/issues"
+  },
+  "keywords": [
+    "typedoc",
+    "plugin",
+    "typedoc-plugin",
+    "typedocplugin",
+    "emoji",
+    "emojify"
+  ],
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.cts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "files": [
+    "./dist"
+  ],
+  "engines": {
+    "node": ">=21.0.0"
+  },
+  "scripts": {
+    "build:tsdown": "tsdown",
+    "lint:eslint": "eslint ."
+  },
+  "peerDependencies": {
+    "typedoc": "^0.28.0"
+  },
+  "dependencies": {
+    "jsdom": "^30.0.1",
+    "node-emoji": "^2.2.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/jsdom": "^30.0.0",
+    "@types/node": "^26.4.0",
+    "@typescript/native": "npm:typescript@^7.0.2",
+    "eslint": "^10.9.0",
+    "tsdown": "^0.22.14",
+    "typescript": "npm:@typescript/typescript6@^6.0.2",
+    "typescript-eslint": "^8.67.0"
+  }
+}
