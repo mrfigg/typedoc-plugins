@@ -129,6 +129,8 @@ if (executingFilePath === currentFilePath) {
         options: string
         out: string
         readme?: string
+        githubPages?: boolean
+        replaceText?: unknown
       }[] = [
         {
           options: resolve('./typedoc.json').replace(/\\/g, '/'),
@@ -138,9 +140,22 @@ if (executingFilePath === currentFilePath) {
       ]
 
       for (const [, { docsPath, optionsPath }] of Object.entries(pluginsData)) {
+        const replaceText = JSON.parse(
+          readFileSync(optionsPath, 'utf8')
+        ).replaceText
+
+        replaceText.replacements.push({
+          pattern:
+            'available at \\[https?:\\/\\/(www\\.)?github\\.com\\/mrfigg\\/typedoc-plugins\\/?[^\\]]*\\]\\(https?:\\/\\/(www\\.)?github\\.com\\/mrfigg\\/typedoc-plugins\\/?[^)]*\\)',
+          flags: 'gmis',
+          replace: '[here](../)',
+        })
+
         configs.push({
           options: optionsPath.replace(/\\/g, '/'),
           out: docsPath.replace(/\\/g, '/'),
+          githubPages: false,
+          replaceText,
         })
       }
 

@@ -2,7 +2,6 @@
   "$schema": "https://typedoc.org/schema.json",
   "name": "Iconify Navigation Links",
   "entryPoints": ["./src/index.ts"],
-  "githubPages": false,
   "disableSources": true,
   "includeHierarchySummary": false,
   "headings": {
@@ -31,11 +30,6 @@
         "pattern": "#+ Example(?:(?!^#).)*",
         "flags": "gmis",
         "replace": ""
-      },
-      {
-        "pattern": "available at \\[https?:\\/\\/(www\\.)?github\\.com\\/mrfigg\\/typedoc-plugins\\/?[^\\]]*\\]\\(https?:\\/\\/(www\\.)?github\\.com\\/mrfigg\\/typedoc-plugins\\/?[^)]*\\)",
-        "flags": "gmis",
-        "replace": "[here](../)"
       }
     ]
   }
