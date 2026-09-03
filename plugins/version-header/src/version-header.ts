@@ -5,6 +5,12 @@ import { Application, ParameterType, Renderer } from 'typedoc'
 import { JSDOM } from 'jsdom'
 import { parse as parseSemver } from 'semver'
 
+declare module 'typedoc' {
+  export interface TypeDocOptionMap {
+    versionHeaderFormat: string
+  }
+}
+
 /** @private */
 export function load(app: Application) {
   app.options.addDeclaration({
@@ -50,7 +56,7 @@ export function load(app: Application) {
       replacements['version'] = event.project.packageVersion
     }
 
-    header = <string>app.options.getValue('versionHeaderFormat')
+    header = app.options.getValue('versionHeaderFormat')
 
     if (!/{{name}}/.test(header)) {
       header = `{{name}} - ${header}`

@@ -1,7 +1,7 @@
 {
   "name": "typedoc-plugin-version-header",
-  "version": "2.0.0",
-  "description": "A plugin for TypeDoc that makes the project's version appear only in the page header",
+  "version": "2.0.1",
+  "description": "A plugin for TypeDoc that makes the project's version appear only in the page header in the default theme",
   "author": "MrFigg",
   "license": "MIT",
   "homepage": "https://mrfigg.github.io/typedoc-plugins/version-header",

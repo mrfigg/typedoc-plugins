@@ -8,6 +8,16 @@ import { JSDOM } from 'jsdom'
 import { getIconsCSS } from '@iconify/utils'
 import { locate } from '@iconify/json'
 
+declare module 'typedoc' {
+  export interface TypeDocOptionMap {
+    iconifyNavigationLinks: {
+      [key: string]: string
+    }
+    iconifyNavigationLinksFontSize: string
+    iconifyNavigationLinksTooltips: boolean
+  }
+}
+
 /** @private */
 export function load(app: Application) {
   const defaultFontSize = `1.25em`
@@ -42,19 +52,10 @@ export function load(app: Application) {
   let addTooltip = false
 
   app.on(Application.EVENT_BOOTSTRAP_END, (app) => {
-    const fontSize =
-      (app.options.getValue('iconifyNavigationLinksFontSize') as string) ||
-      defaultFontSize
-
-    addTooltip = !!(app.options.getValue(
-      'iconifyNavigationLinksTooltips'
-    ) as boolean)
+    addTooltip = app.options.getValue('iconifyNavigationLinksTooltips')
 
     for (const [linkTitle, iconSlug] of Object.entries(
-      (app.options.getValue('iconifyNavigationLinks') ?? {}) as Record<
-        string,
-        string
-      >
+      app.options.getValue('iconifyNavigationLinks') ?? {}
     )) {
       if (
         typeof linkTitle !== 'string' ||
@@ -117,7 +118,7 @@ export function load(app: Application) {
   }
 
   [class^="iconify-navigation-links--"] {
-    font-size: ${fontSize};
+    font-size: ${app.options.getValue('iconifyNavigationLinksFontSize')};
     display: inline-block;
     vertical-align: middle;
   }

@@ -1,5 +1,3 @@
-Examples:
-
 | Code                                   | Icon                                 |
 | -------------------------------------- | ------------------------------------ |
 | `:ant-design:github-filled:`           | :ant-design:github-filled:           |

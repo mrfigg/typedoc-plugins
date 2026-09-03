@@ -1,6 +1,6 @@
 {
   "name": "typedoc-plugin-iconify",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A plugin for TypeDoc that adds iconify parsing support",
   "author": "MrFigg",
   "license": "MIT",

@@ -4,15 +4,15 @@
 
 A plugin for TypeDoc that adds iconify parsing support.
 
-## Example
-
-A basic example is available at [https://mrfigg.github.io/typedoc-plugins/iconify](https://mrfigg.github.io/typedoc-plugins/iconify).
-
 ## Installation
 
 ```sh
 npm install -D typedoc-plugin-iconify
 ```
+
+## Example
+
+A basic example is available at [https://mrfigg.github.io/typedoc-plugins/iconify](https://mrfigg.github.io/typedoc-plugins/iconify).
 
 ## Other Plugins
 

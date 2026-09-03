@@ -1,1 +1,1 @@
-The heading on this page will have the Document kind tag prepended to the document name.
+The heading on the EXAMPLE page and the LICENSE page will have the Document kind tag prepended to the document name.

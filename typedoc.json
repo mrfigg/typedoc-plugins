@@ -14,7 +14,7 @@
   "navigationLinks": {
     "GitHub": "https://github.com/mrfigg/typedoc-plugins"
   },
-  "plugin": ["./dist/index.mjs", "typedoc-plugin-iconify-navigation-links"],
+  "plugin": ["typedoc-plugin-iconify-navigation-links"],
   "iconifyNavigationLinks": {
     "GitHub": "ant-design:github-filled"
   }

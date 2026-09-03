@@ -4,6 +4,14 @@ import { resolve, dirname } from 'node:path'
 
 import { Application, ParameterType, ReflectionKind, Converter } from 'typedoc'
 
+declare module 'typedoc' {
+  export interface TypeDocOptionMap {
+    renameDocuments: {
+      [key: string]: string
+    }
+  }
+}
+
 /** @private */
 export function load(app: Application) {
   app.options.addDeclaration({
@@ -24,7 +32,7 @@ export function load(app: Application) {
         : process.cwd()
 
     for (const [file, name] of Object.entries(
-      (app.options.getValue('renameDocuments') ?? {}) as Record<string, string>
+      app.options.getValue('renameDocuments')
     )) {
       if (typeof file !== 'string' || typeof name !== 'string') {
         continue

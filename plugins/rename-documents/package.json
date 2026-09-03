@@ -1,6 +1,6 @@
 {
   "name": "typedoc-plugin-rename-documents",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "A plugin for TypeDoc that renames documents without a yaml frontmatter section",
   "author": "MrFigg",
   "license": "MIT",

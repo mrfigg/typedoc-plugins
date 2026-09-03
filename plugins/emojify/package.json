@@ -1,6 +1,6 @@
 {
   "name": "typedoc-plugin-emojify",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "A plugin for TypeDoc that adds emoji parsing support",
   "author": "MrFigg",
   "license": "MIT",

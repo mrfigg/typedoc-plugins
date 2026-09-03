@@ -4,15 +4,15 @@
 
 A plugin for TypeDoc that renames documents without a yaml frontmatter section.
 
-## Example
-
-A basic example is available at [https://mrfigg.github.io/typedoc-plugins/rename-documents](https://mrfigg.github.io/typedoc-plugins/rename-documents).
-
 ## Installation
 
 ```sh
 npm install -D typedoc-plugin-rename-documents
 ```
+
+## Example
+
+A basic example is available at [https://mrfigg.github.io/typedoc-plugins/rename-documents](https://mrfigg.github.io/typedoc-plugins/rename-documents).
 
 ## Options
 
